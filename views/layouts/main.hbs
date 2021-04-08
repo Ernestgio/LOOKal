@@ -2,27 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <title>LOOKal</title>
 </head>
+
 <body>
-    <% tourServices.forEach(function(tourService){ %>
-        <div>
-            <h2><%= tourService.name %></h2>
-        </div>
-
-        <img src=<%=tourService.imageURL%>>
-
-        <h3><%= tourService.description %></h3>
-        <h3><%= tourService.location %></h3>
-        <h3><%= tourService.adultTicketPrice %></h3>
-        <h3><%= tourService.childrenTicketPrice %></h3>
-
-    <% }); %>
-    
+    {{> _header}}
+    <div class="container">
+        {{{body}}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.1/ckeditor.js"></script>
 </body>
 </html>
