@@ -7,10 +7,10 @@ const path = require('path');
 const express = require('express');
 const connectDB = require('./config/db');
 
-
 //routes
 const indexRoutes = require('./routes/index');
-const OrderRoutes = require('./routes/Order');
+const orderRoutes = require('./routes/Order');
+const serviceRoutes = require('./routes/TourService');
 
 //Init express instance
 const app = express();
@@ -36,7 +36,8 @@ catch(err){
 }
 
 app.use('/',indexRoutes);
-app.use('/Orders',OrderRoutes);
+app.use('/orders',orderRoutes);
+app.use('/services', serviceRoutes);
 
 //App listening on port 3000
 app.listen(
