@@ -59,7 +59,7 @@ router.post('/new', async (req,res) => {
         childrenTicketPrice,
         unit,
         type
-    }
+    };
 
     try {
         const result = await TourService.create(newTourService);

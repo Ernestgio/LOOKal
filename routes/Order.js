@@ -18,8 +18,8 @@ router.get('/', async (req,res) => {
 });
 
 //verify order
-router.get('/:id', async(req,res) => {
-    let queryId = req.params.id;
+router.post('/verify', async(req,res) => {
+    let queryId = req.body.orderId;
     try{
         const existingOrder = await Order.findById({id:queryId});
         let isFound = true;
