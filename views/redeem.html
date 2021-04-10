@@ -23,26 +23,29 @@
                 <form action="/orders/lacak" method=GET>
                     <div class="input-field">
                         <input type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Redeem">
                     </div>
                 </form>
                 <% if (order == null ) { %>
-                    <p style="color:#C00246; font-size:10px">
+                    <p style="color:#C00246; font-size:12px">
                         Kode yang dimasukkan salah! Coba ulangi lagi.
                     </p>
                     <% } else if (order.id == -999){ %>
                         <!-- <p>baru awal</p> -->
                         <%} else { %>
                             <p>
-                                <%= order.id %>
-                                    Ubah lagi nanti
+
+                                <p style="color:#65D5AD; font-size:12px">
+                                    Tiket dengan kode
+                                    <%= order.id %> berhasil redeem!
+                                </p>
                             </p>
                             <% } %>
             </div>
             <div style="width:300px; float:right;">
                 <h2>No Tiket</h2>
                 <h2>
-                    <!-- no tiket -->
+                    <!-- no tiket kasi if statement-->
                 </h2>
                 <br>
 

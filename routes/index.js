@@ -13,10 +13,8 @@ router.get('/', async(req, res) => {
 });
 
 router.get('/lacak', (req, res) => {
-    res.render('lacak');
+    const orderbarubuka = { id: -999, name: "kosong" }
+    res.render('lacak', { order: orderbarubuka });
 });
 
-router.get('/track', (req, res) => {
-    res.render('track');
-});
 module.exports = router;
