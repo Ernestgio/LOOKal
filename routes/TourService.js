@@ -17,7 +17,7 @@ router.get('/:id', async (req,res) => {
         console.log(err);
     }
     // render detailTourService.html dan passing data single tourService
-    res.render('detailTourService',{tourService:tourService});
+    res.render('detailTourService',{tourService:tourService[0]});
 });
 
 
@@ -32,7 +32,7 @@ router.post('/search', async (req,res) => {
         console.log(err);
     }
     //render index.html and pass tourServicesdata
-    res.render('index',{tourServices:searchResults});
+    res.render('home',{tourServices:searchResults});
 });
 
 
@@ -72,7 +72,7 @@ router.post('/new', async (req,res) => {
     }
 
     //setelah add new tour service,
-    res.render('index',{tourServices: tourServices});
+    res.render('home',{tourServices: tourServices});
 
 });
 
@@ -80,7 +80,6 @@ router.post('/new', async (req,res) => {
 // Get order form page
 router.get('/:id/order', async(req,res) => {
     let requestedId = req.params.id;
-
     try{
         let tourService = await TourService.findById(requestedId);
     }
@@ -88,9 +87,11 @@ router.get('/:id/order', async(req,res) => {
         console.log(err);
     }
     //render formulirOrder.html
-    res.render('formulirOrder',{tourService:tourService});
+    res.render('formulirOrder',{tourService:tourService[0]});
 });
 
+
+// post new order
 router.post('/:id/order', async (req,res) => {
     let requestedId = req.params.id;
     try{
@@ -121,7 +122,7 @@ router.post('/:id/order', async (req,res) => {
     catch(err){
         console.log(err);
     }
-
+    // render 
     res.render('konfirmasiOrder',{newOrder:newlyCreatedOrder});    
 });
 
