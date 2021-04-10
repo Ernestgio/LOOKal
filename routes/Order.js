@@ -34,4 +34,15 @@ router.post('/verify', async(req,res) => {
     }
 });
 
+router.post('/lacak', async (req,res) => {
+    const orderQueryId = req.body.orderId;
+    try {
+        const orderResult = Order.findById(orderQuery);
+    }
+    catch(err){
+        console.log(err);
+    }
+    res.render('',{});
+})
+
 module.exports = router;
