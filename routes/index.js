@@ -26,8 +26,14 @@ router.get('/sekitarkita', (req, res) => {
     res.render('sekitarkita');
 });
 
-router.get('/layanananda', (req, res) => {
-    res.render('layanananda');
+router.get('/layanananda', async(req, res) => {
+    try {
+        const tourServices = await TourService.find();
+        res.render('layanananda', { tourServices: tourServices });
+    } catch (err) {
+        console.log(err);
+        console.log("ada crash kawanku");
+    };
 });
 
 module.exports = router;
