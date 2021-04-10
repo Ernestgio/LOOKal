@@ -7,10 +7,10 @@ const path = require('path');
 const express = require('express');
 const connectDB = require('./config/db');
 
-
 //routes
 const indexRoutes = require('./routes/index');
-const OrderRoutes = require('./routes/Order');
+const orderRoutes = require('./routes/Order');
+const serviceRoutes = require('./routes/TourService');
 
 //Init express instance
 const app = express();
@@ -23,20 +23,18 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(express.static(__dirname + "/public"));
 
-const seedDB = require('./seed');
-
 
 //connect to Mongo Database
 try{
     connectDB();
-    //seedDB();
 }
 catch(err){
     console.log('error seeding');
 }
 
 app.use('/',indexRoutes);
-app.use('/Orders',OrderRoutes);
+app.use('/orders',orderRoutes);
+app.use('/services', serviceRoutes);
 
 //App listening on port 3000
 app.listen(

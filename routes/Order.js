@@ -18,8 +18,8 @@ router.get('/', async (req,res) => {
 });
 
 //verify order
-router.get('/:id', async(req,res) => {
-    let queryId = req.params.id;
+router.post('/verify', async(req,res) => {
+    let queryId = req.body.orderId;
     try{
         const existingOrder = await Order.findById({id:queryId});
         let isFound = true;
@@ -33,5 +33,16 @@ router.get('/:id', async(req,res) => {
         console.log(err);
     }
 });
+
+router.post('/lacak', async (req,res) => {
+    const orderQueryId = req.body.orderId;
+    try {
+        const orderResult = Order.findById(orderQuery);
+    }
+    catch(err){
+        console.log(err);
+    }
+    res.render('',{});
+})
 
 module.exports = router;
