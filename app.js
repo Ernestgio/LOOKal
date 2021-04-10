@@ -24,9 +24,11 @@ app.set('view engine', 'html');
 app.use(express.static(__dirname + "/public"));
 
 
+//const seedDB = require('./seed');
 //connect to Mongo Database
 try{
     connectDB();
+    //seedDB();
 }
 catch(err){
     console.log('error seeding');
