@@ -34,10 +34,11 @@ router.post('/verify', async(req,res) => {
     }
 });
 
+//lacak order
 router.post('/lacak', async (req,res) => {
     const orderQueryId = req.body.orderId;
     try {
-        const orderResult = Order.findById(orderQuery);
+        const orderResult = await Order.findById(orderQuery);
     }
     catch(err){
         console.log(err);

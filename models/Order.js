@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const OrderSchema = mongoose.Schema({
     consumerId: String,
     consumerName: String,
-    childrenTicketAmt: Number,
-    adultTicketAmt: Number,
+    ticketAmt: Number,
     purchaseDate: Date,
     serviceId: String,
-    ticketId: String,
-    phoneNumber: String
+    phoneNumber: String,
+    totalPrice: Number,
+    paymentMethod: String
 });
 
 module.exports = mongoose.model('Order', OrderSchema);
