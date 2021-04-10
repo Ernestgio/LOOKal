@@ -12,13 +12,11 @@ router.get('/', async(req, res) => {
     }
 });
 
-router.get('/lacak', async(req, res) => {
-    try {
-        const tourServices = await TourService.find(); // ini apa???
-        res.render('lacak', { tourServices: tourServices });
-        console.log("Lacak Page")
-    } catch (err) {
-        console.log(err);
-    }
-})
+router.get('/lacak', (req, res) => {
+    res.render('lacak');
+});
+
+router.get('/track', (req, res) => {
+    res.render('track');
+});
 module.exports = router;
