@@ -13,7 +13,7 @@ router.get('/', async(req, res) => {
 });
 
 router.get('/lacak', (req, res) => {
-    const orderbarubuka = { id: -999, name: "kosong" }
+    const orderbarubuka = { _id: { $oid: -999 }, name: "kosong" }
     res.render('lacak', { order: orderbarubuka });
 });
 

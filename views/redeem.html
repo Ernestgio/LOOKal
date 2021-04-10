@@ -30,14 +30,14 @@
                     <p style="color:#C00246; font-size:12px">
                         Kode yang dimasukkan salah! Coba ulangi lagi.
                     </p>
-                    <% } else if (order.id == -999){ %>
+                    <% } else if (order._id.$oid == -999){ %>
                         <!-- <p>baru awal</p> -->
                         <%} else { %>
                             <p>
 
                                 <p style="color:#65D5AD; font-size:12px">
                                     Tiket dengan kode
-                                    <%= order.id %> berhasil redeem!
+                                    <%= order._id.$oid %> berhasil redeem!
                                 </p>
                             </p>
                             <% } %>
@@ -59,7 +59,7 @@
                     <br><br> Masa Berlaku<br><br>
                 </div>
                 <div style="width:220px; float:right;">
-                    <% if (order == null || order.id == -999 ) { %>
+                    <% if (order == null || order._id.$oid == -999 ) { %>
                         <!-- nanti apus aja -->
                         undefined<br><br> undefined
                         <br><br> undefined
@@ -72,7 +72,7 @@
 
                         <%} else { %>
                             <p>
-                                <%= order.id %>
+                                <%= order._id.$oid %>
                                     Ada
                             </p>
                             <% } %>
