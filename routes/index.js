@@ -17,4 +17,17 @@ router.get('/lacak', (req, res) => {
     res.render('lacak', { order: orderbarubuka });
 });
 
+router.get('/redeem', (req, res) => {
+    const orderbarubuka = { _id: { $oid: -999 }, name: "kosong" }
+    res.render('redeem', { order: orderbarubuka });
+});
+
+router.get('/sekitarkita', (req, res) => {
+    res.render('sekitarkita');
+});
+
+router.get('/layanananda', (req, res) => {
+    res.render('layanananda');
+});
+
 module.exports = router;
