@@ -3,14 +3,22 @@ const router = express.Router();
 
 const TourService = require('../models/TourService');
 
-router.get('/', async (req,res) => {
-    try{
+router.get('/', async(req, res) => {
+    try {
         const tourServices = await TourService.find();
-        res.render('index',{tourServices:tourServices});
-    }
-    catch(err){
+        res.render('index', { tourServices: tourServices });
+    } catch (err) {
         console.log(err);
     }
 });
 
+router.get('/lacak', async(req, res) => {
+    try {
+        const tourServices = await TourService.find(); // ini apa???
+        res.render('lacak', { tourServices: tourServices });
+        console.log("Lacak Page")
+    } catch (err) {
+        console.log(err);
+    }
+})
 module.exports = router;
