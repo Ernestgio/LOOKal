@@ -24,8 +24,8 @@ font-family: 'Open Sans', sans-serif">
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Beranda</a></li>
-      <li><a href="#">Lacak Tiket</a></li>
-      <li><a href="#">Sekitar Kita</a></li>
+      <li><a href="/lacak">Lacak Tiket</a></li>
+      <li><a href="/sekitar">Sekitar Kita</a></li>
     </ul>
   </div>
 </nav>
@@ -34,6 +34,17 @@ font-family: 'Open Sans', sans-serif">
   <h3 style="text-align: center;">Mulai Petualanganmu Sekarang!</h3>
   <h5 style="text-align: center">Indonesia kaya akan wisata alamnya</h5>
   <h5 style="text-align: center">Jelajahi wisata lokal hingga ke pedalaman</h5>
+</div>
+
+<div class="wrap">
+  <!-- <div class="search"> -->
+    <form class="search" action="/services/search" method="POST">
+     <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchKey">
+     <button type="submit" class="searchButton">
+       <i class="fa fa-search"></i>
+    </button>
+    </form>
+  <!-- </div> -->
 </div>
 
 <div class="container1">
@@ -48,7 +59,7 @@ font-family: 'Open Sans', sans-serif">
             <div class="card-body">
               <h4 class="card-title">Green Canyon Pangandaran</h4>
               <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="#" class="btn btn-primary">Lihat Detail</a>
+              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
             </div>
           </div>
         </div>
@@ -58,7 +69,7 @@ font-family: 'Open Sans', sans-serif">
             <div class="card-body">
               <h4 class="card-title">Gunung Gede Pangrango</h4>
               <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="#" class="btn btn-primary">Lihat Detail</a>
+              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
             </div>
           </div>
         </div>
@@ -68,7 +79,7 @@ font-family: 'Open Sans', sans-serif">
             <div class="card-body">
               <h4 class="card-title">Kawah Ijen</h4>
               <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="#" class="btn btn-primary">Lihat Detail</a>
+              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
             </div>
           </div>
         </div>
@@ -76,19 +87,6 @@ font-family: 'Open Sans', sans-serif">
     
   </div>
 </div>
-
-<div class="wrap">
-  <!-- <div class="search"> -->
-    <form class="search" action="/services/search" method="POST">
-     <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchKey">
-     <button type="submit" class="searchButton">
-       <i class="fa fa-search"></i>
-    </button>
-    </form>
-  <!-- </div> -->
-</div>
-
-
 
 <style>
   
