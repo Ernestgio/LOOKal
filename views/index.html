@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <% tourServices.forEach(function(tourService){ %>
         <div>
             <h2>
@@ -19,21 +18,12 @@
 
         <img src=<%=tourService.imageURL%>>
 
-        <h3>
-            <%= tourService.description %>
-        </h3>
-        <h3>
-            <%= tourService.location %>
-        </h3>
-        <h3>
-            <%= tourService.adultTicketPrice %>
-        </h3>
-        <h3>
-            <%= tourService.ticketPrice %>
-        </h3>
-
-        <% }); %>
-
+        <h3><%= tourService.description %></h3>
+        <h3><%= tourService.location %></h3>
+        <h3><%= tourService.adultTicketPrice %></h3>
+        <h3><%= tourService.childrenTicketPrice %></h3>
+    <% }); %>
+    
 </body>
 
 </html>

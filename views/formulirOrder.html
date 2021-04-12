@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOKal</title>
+</head>
+
+<body>
+    <h1>Review Pesanan</h1>
+    <form action="/services/<%=tourService._id%>/order" method="POST">
+        <label for="nama">Nama</label><br>
+        <input type="text" id="nama" name="nama"><br>
+
+        <label for="nomorHP">Nomor HP</label><br>
+        <input type="text" id="nomorHP" name="nomorHP"><br><br>
+
+        <label for="nomorKTP">Nomor KTP</label><br>
+        <input type="text" id="nomorKTP" name="nomorKTP"><br><br>
+
+        <label for="jumlahTiket">Jumlah Tiket</label><br>
+        <input type="text" id="jumlahTiket" name="jumlahTiket"><br><br>
+
+        <label for="metodePembayaran">Metode Pembayaran</label><br>
+        <input type="text" id="metodePembayaran" name="metodePembayaran"><br>
+
+        <input type="submit" value="Submit">
+      </form> 
+</body>

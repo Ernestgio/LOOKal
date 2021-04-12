@@ -12,6 +12,7 @@ router.get('/', async(req, res) => {
     }
 });
 
+
 router.get('/lacak', (req, res) => {
     const orderbarubuka = { _id: { $oid: -999 }, name: "kosong" }
     res.render('lacak', { order: orderbarubuka });
@@ -35,5 +36,18 @@ router.get('/layanananda', async(req, res) => {
         console.log("ada crash kawanku");
     };
 });
+
+//tes
+// router.get('/postOrder', async (req,res) => {
+//     try{
+//         const tourService = await TourService.findOne();
+//         res.render("formulirOrder",{tourService:tourService})
+//         console.log(tourService._id)
+//     }
+//     catch(err){
+//         console.log(err)
+//     }
+// })
+
 
 module.exports = router;
