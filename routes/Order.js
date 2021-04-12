@@ -10,11 +10,12 @@ const Order = require('../models/Order');
 router.get('/', async (req,res) => {
     try{
         const orders = await Order.find();
+        res.render('orders',{orders:orders});
     }
     catch(err){
         console.log(err);
     }
-    res.render('orders',{orders:orders});
+    
 });
 
 //verify order

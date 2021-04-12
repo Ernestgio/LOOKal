@@ -118,12 +118,13 @@ router.post('/:id/order', async (req,res) => {
             paymentMethod
         };
         let newlyCreatedOrder = await Order.create(newOrder);
+        res.render('konfirmasiOrder',{newOrder:newlyCreatedOrder});
     }
     catch(err){
         console.log(err);
     }
     // render 
-    res.render('konfirmasiOrder',{newOrder:newlyCreatedOrder});    
+    // res.render('konfirmasiOrder',{newOrder:newlyCreatedOrder});    
 });
 
 module.exports = router;

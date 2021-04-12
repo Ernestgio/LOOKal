@@ -13,4 +13,16 @@ router.get('/', async (req,res) => {
     }
 });
 
+//tes
+// router.get('/postOrder', async (req,res) => {
+//     try{
+//         const tourService = await TourService.findOne();
+//         res.render("formulirOrder",{tourService:tourService})
+//         console.log(tourService._id)
+//     }
+//     catch(err){
+//         console.log(err)
+//     }
+// })
+
 module.exports = router;

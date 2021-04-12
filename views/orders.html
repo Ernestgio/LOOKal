@@ -4,9 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="LOOKal\public\css\index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Orders</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1 style="font-size:60px; margin-top:20px; margin-bottom:20px" }>Order</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>consumerId</th>
+                        <th>consumerName</th>
+                        <th>ticketAmt</th>
+                        <th>purchaseDate</th>
+                        <th>serviceId</th>
+                        <th>phoneNumber</th>
+                        <th>totalPrice</th>
+                        <th>paymentMethod</th>
+                        <th>isRedeem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% orders.forEach(function(orders){ %>
+                        <tr>
+                            <td>
+                                <%= orders.consumerId %>
+                            </td>
+                            <td>
+                                <%= orders.consumerName %>
+                            </td>
+                            <td>
+                                <%= orders.ticketAmt %>
+                            </td>
+                            <td>
+                                <%= orders.purchaseDate %>
+                            </td>
+                            <td>
+                                <%= orders.serviceId %>
+                            </td>
+                            <td>
+                                <%= orders.phoneNumber %>
+                            </td>
+                            <td>
+                                <%= orders.totalPrice %>
+                            </td>
+                            <td>
+                                <%= orders.paymentMethod %>
+                            </td>
+                            <td>
+                                <%= orders.isRedeem %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
 </body>
+
 </html>

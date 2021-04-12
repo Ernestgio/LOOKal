@@ -8,7 +8,8 @@ const OrderSchema = mongoose.Schema({
     serviceId: String,
     phoneNumber: String,
     totalPrice: Number,
-    paymentMethod: String
+    paymentMethod: String,
+    isRedeem: Boolean
 });
 
 module.exports = mongoose.model('Order', OrderSchema);
