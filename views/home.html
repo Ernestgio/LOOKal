@@ -20,10 +20,10 @@ font-family: 'Open Sans', sans-serif">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style="font-family: suravaram;">LOOKal</a>
+      <a class="navbar-brand" href="/" style="font-family: suravaram;">LOOKal</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Beranda</a></li>
+      <li class="active"><a href="/">Beranda</a></li>
       <li><a href="/lacak">Lacak Tiket</a></li>
       <li><a href="/sekitar">Sekitar Kita</a></li>
     </ul>
@@ -39,7 +39,7 @@ font-family: 'Open Sans', sans-serif">
 <div class="wrap">
   <!-- <div class="search"> -->
     <form class="search" action="/services/search" method="POST">
-     <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchKey">
+     <input type="text" class="searchKey" placeholder="What are you looking for?" name="searchKey">
      <button type="submit" class="searchButton">
        <i class="fa fa-search"></i>
     </button>
@@ -49,40 +49,21 @@ font-family: 'Open Sans', sans-serif">
 
 <div class="container1">
   <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13" style="width:100%;">
-<h3 class="centered" style="color:white">Dapatkan Potongan Harga untuk berwisata di daerah Sidorejo, Pangandaran, dan masih banyak lagi!</h3>
   <div class="container" style="margin-top:50px; margin: left 50px">
       <h3>Rekomendasi Wisata</h3>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card" style="width:300px; border:black">
-            <img class="card-img-top" src="https://wisato.id/wp-content/uploads/2018/02/panjat-tebing-1.jpg" alt="Card image" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Green Canyon Pangandaran</h4>
-              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
+        <% tourServices.forEach(function(tourService){ %>
+          <div class="col-md-4" style="margin-bottom: 50px;"> 
+              <div class="card" style="width:300px; border:black">
+                <img class="card-img-top" src="<%=tourService.imageURL %>" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title"><%=tourService.name%></h4>
+                  <h5>Harga: <%=tourService.ticketPrice %> / <%=tourService.unit %></h5>
+                  <a href="/services/<%=tourService._id.$oid%>" class="btn btn-primary">Lihat Detail</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <div class="card" style="width:300px; border:black">
-            <img class="card-img-top" src="https://genpi.id/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-28-at-7.21.35-PM.jpeg" alt="Card image" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Gunung Gede Pangrango</h4>
-              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> 
-          <div class="card" style="width:300px; border:black">
-            <img class="card-img-top" src="https://nusadaily.com/wp-content/uploads/2020/07/kawah-ijen.jpeg" alt="Card image" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">Kawah Ijen</h4>
-              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
-              <a href="/id/services" class="btn btn-primary">Lihat Detail</a>
-            </div>
-          </div>
-        </div>
+          <% }); %>
       </div>
     
   </div>
