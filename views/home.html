@@ -1,104 +1,172 @@
-<div>
-    <h3 style="text-align: center">Mulai petualanganmu sekarang!</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOOKal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<body style="height:1500px; background: #f2f2f2;
+font-family: 'Open Sans', sans-serif">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="font-family: suravaram;">LOOKal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Beranda</a></li>
+      <li><a href="#">Lacak Tiket</a></li>
+      <li><a href="#">Sekitar Kita</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" style="margin-top:50px">
+  <h3 style="text-align: center;">Mulai Petualanganmu Sekarang!</h3>
+  <h5 style="text-align: center">Indonesia kaya akan wisata alamnya</h5>
+  <h5 style="text-align: center">Jelajahi wisata lokal hingga ke pedalaman</h5>
 </div>
 
-<div>
-    <h5 style="text-align: center">Indonesia kaya akan wisata alamnya</h5>
-    <h5 style="text-align: center">Jelajahi wisata lokal hingga ke pedalaman</h5>
-</div>
-
-<div class="container">
-    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13" style="width:100%;">
-	<h3 class="centered" style="color:white">Dapatkan Potongan Harga untuk berwisata di daerah Sidorejo, Pangandaran, dan masih banyak lagi!</h3>
+<div class="container1">
+  <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13" style="width:100%;">
+<h3 class="centered" style="color:white">Dapatkan Potongan Harga untuk berwisata di daerah Sidorejo, Pangandaran, dan masih banyak lagi!</h3>
+  <div class="container" style="margin-top:50px; margin: left 50px">
+      <h3>Rekomendasi Wisata</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width:300px; border:black">
+            <img class="card-img-top" src="https://wisato.id/wp-content/uploads/2018/02/panjat-tebing-1.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Green Canyon Pangandaran</h4>
+              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
+              <a href="#" class="btn btn-primary">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <div class="card" style="width:300px; border:black">
+            <img class="card-img-top" src="https://genpi.id/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-28-at-7.21.35-PM.jpeg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Gunung Gede Pangrango</h4>
+              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
+              <a href="#" class="btn btn-primary">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <div class="card" style="width:300px; border:black">
+            <img class="card-img-top" src="https://nusadaily.com/wp-content/uploads/2020/07/kawah-ijen.jpeg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Kawah Ijen</h4>
+              <p class="card-text" style="text-align: left;">Sebuah tempat pariwisata alam sangat Indah dan Estetik jnasdjnkjadsnjkn asnjdjnsadjnd </p>
+              <a href="#" class="btn btn-primary">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
 </div>
 
 <div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
+  <!-- <div class="search"> -->
+    <form class="search" action="/services/search" method="POST">
+     <input type="text" class="searchTerm" placeholder="What are you looking for?" name="searchKey">
+     <button type="submit" class="searchButton">
+       <i class="fa fa-search"></i>
+    </button>
+    </form>
+  <!-- </div> -->
 </div>
 
+
+
 <style>
-body {
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.judul {
-    margin-top:100px;
-}
-
-.search {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-.searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
-}
-
-.searchTerm:focus {
-  color: #00B4CC;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-  width: 30%;
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.backdrop-beranda{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.text-beranda{
-    height:40px;
+  
+  .judul {
+      margin-top:100px;
+  }
+  
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus {
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
     text-align: center;
-}
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap {
+    width: 30%;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .backdrop-beranda{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .text-beranda{
+      height:40px;
+      text-align: center;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container1 {
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    text-align: center;
+    color:black;
+  }
+  </style>
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.container {
-  width: 100%;
-  position: absolute;
-  margin-top: 100px;
-  text-align: center;
-  color:black;
-}
-</style>
+</body>
+</html>
