@@ -15,16 +15,17 @@
 
 <body>
     <div class="container">
-        <h1 style="font-size:60px; margin-top:20px; margin-bottom:20px" }>Layanan Anda</h1>
+        <h1 style="font-size:60px; margin-top:20px; margin-bottom:50px" }>Layanan Anda</h1>
+
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>name</th>
-                        <th>location</th>
-                        <th>ticketPrice</th>
-                        <th>description</th>
+                        <th>ID Layanan</th>
+                        <th>Nama Layanan/Wisata</th>
+                        <th>Lokasi</th>
+                        <th>Harga Tiket</th>
+                        <th>Deskripsi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +44,7 @@
                                 <%= tourService.ticketPrice %>
                             </td>
                             <td>
-                                <%= tourService.description.substring(0, 50).concat("...") %>
+                                <%= tourService.description.substring(0, 115).concat("...") %>
                             </td>
                         </tr>
                         <% }); %>

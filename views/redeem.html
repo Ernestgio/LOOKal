@@ -11,33 +11,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <title>Lacak Tiket</title>
+    <title>Redeem Tiket</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Lacak Tiket</h1>
+        <h1>Redeem Tiket</h1>
         <br>
         <div style="width:800px;">
             <div style="width:300px; float:left;">
-                <form action="/orders/lacak" method=GET>
+                <form action="/orders/verify" method=POST>
                     <div class="input-field">
-                        <input type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket">
-                        <input type="submit" value="Redeem">
+                        <input class="w3-input" type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket" style="padding:15px 32px; width: 100%; font-size: 17px;">
+                        <br style="margin: 20px;">
+                        <input type="submit" value="Redeem" style="background-color: #006994; color: white; margin: 10px; border: none; text-align: center; padding: 12px 32px; display: inline-block;">
                     </div>
                 </form>
                 <% if (order == null ) { %>
-                    <p style="color:#C00246; font-size:12px">
+                    <p style="color:#C00246; font-size:13px">
                         Kode yang dimasukkan salah! Coba ulangi lagi.
                     </p>
                     <% } else if (order._id.$oid == -999){ %>
                         <!-- <p>baru awal</p> -->
                         <%} else { %>
                             <p>
-
-                                <p style="color:#65D5AD; font-size:12px">
+                                <p style="color:#65D5AD; font-size:13px">
                                     Tiket dengan kode
-                                    <%= order._id.$oid %> berhasil redeem!
+                                    <%= order._id %> berhasil redeem!
                                 </p>
                             </p>
                             <% } %>
@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-        <div style="clear: both;"></div>
+
         <style>
             html {
                 font-family: "Source Sans Pro";

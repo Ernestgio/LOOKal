@@ -10,6 +10,16 @@ h1 {
     background-color: aquamarine;
 }
 
+.buttonblue {
+    background-color: #006994;
+    color: white;
+    margin: 5px;
+    border: none;
+    text-align: center;
+    padding: 12px 32px;
+    display: inline-block;
+}
+
 @font-face {
     font-family: 'Source Sans Pro';
     src: url('/font/SourceSansPro-Regular.ttf') format('truetype');

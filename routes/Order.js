@@ -35,7 +35,7 @@ router.post('/verify', async(req, res) => {
 router.get('/lacak', async(req, res) => {
     const orderQueryId = req.body.orderId;
     let orderResult = {
-        id: -998,
+        _id: { $oid: -998 },
         name: "tidak ditemukan"
     };
     try {

@@ -22,19 +22,19 @@
             <div style="width:300px; float:left;">
                 <form action="/orders/lacak" method=GET>
                     <div class="input-field">
-                        <input type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket">
-                        <input type="submit" value="Submit">
+                        <input class="w3-input" type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket" style="padding:15px 32px; width: 100%; font-size: 17px;">
+                        <input type="submit" value="Submit" style="background-color: #006994; color: white; margin: 10px; border: none; text-align: center; padding: 12px 32px; display: inline-block;">
                     </div>
                 </form>
                 <% if (order == null ) { %>
-                    <p style="color:#C00246; font-size:10px">
+                    <p style="color:#C00246; font-size:13px">
                         Kode yang dimasukkan salah! Coba ulangi lagi.
                     </p>
                     <% } else if (order._id.$oid == -999){ %>
                         <!-- <p>baru awal</p> -->
                         <%} else { %>
                             <p>
-                                <%= order._id.$oid %>
+                                <%= order._id.$iod %>
                                     Ubah lagi nanti
                             </p>
                             <% } %>
@@ -69,7 +69,7 @@
 
                         <%} else { %>
                             <p>
-                                <%= order._id.$oid %>
+                                <%= order._id.$oid  %>
                                     Ada
                             </p>
                             <% } %>
