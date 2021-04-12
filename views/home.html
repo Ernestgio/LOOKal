@@ -25,7 +25,9 @@ font-family: 'Open Sans', sans-serif">
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Beranda</a></li>
       <li><a href="/lacak">Lacak Tiket</a></li>
-      <li><a href="/sekitar">Sekitar Kita</a></li>
+      <li><a href="/sekitarkita">Sekitar Kita</a></li>
+      <li><a href="/layanananda">(Owner) Layanan Anda</a></li>
+      <li><a href="/orders">(Owner) Cek seluruh Order</a></li>
     </ul>
   </div>
 </nav>
@@ -59,7 +61,7 @@ font-family: 'Open Sans', sans-serif">
                 <div class="card-body">
                   <h4 class="card-title"><%=tourService.name%></h4>
                   <h5>Harga: <%=tourService.ticketPrice %> / <%=tourService.unit %></h5>
-                  <a href="/services/<%=tourService._id.$oid%>" class="btn btn-primary">Lihat Detail</a>
+                  <a href="/services/<%= tourService._id %>" class="btn btn-primary">Lihat Detail</a>
                 </div>
               </div>
             </div>

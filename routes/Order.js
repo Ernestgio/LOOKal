@@ -40,12 +40,17 @@ router.get('/lacak', async(req, res) => {
         name: "tidak ditemukan"
     };
     try {
-        orderResult = await Order.findById(orderQueryId);
+        const orderResult = await Order.findById(orderQueryId);
+        console.log(orderResult);
     } catch (err) {
         console.log(err);
     }
     res.render('lacak', { order: orderResult }); //passing parameter
 });
+
+// router.post('/lacak', async (req,res) => {
+
+// });
 
 router.get('/redeem', async(req, res) => {
     const orderQueryId = req.body.orderId;
@@ -54,11 +59,11 @@ router.get('/redeem', async(req, res) => {
         name: "tidak ditemukan"
     };
     try {
-        orderResult = await Order.findById(orderQueryId);
+        const orderResult = await Order.findById(orderQueryId);
+        res.render('lacak', { order: orderResult }); //passing parameter
     } catch (err) {
         console.log(err);
     }
-    res.render('lacak', { order: orderResult }); //passing parameter
 });
 
 // bikin method put buat ngelakuin redeem
