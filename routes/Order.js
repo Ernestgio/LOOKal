@@ -25,7 +25,7 @@ router.post('/verify', async(req, res) => {
         if (existingOrder.length == 0) {
             isFound = false;
         }
-        res.render('orderConfirmation', { isFound: isFound, existingOrder: existingOrder[0] });
+        res.render('orderConfirmation', { isFound: isFound, existingOrder: existingOrder });
     } catch (err) {
 
         console.log(err);
