@@ -27,12 +27,12 @@ router.post('/search', async (req,res) => {
 
     try{
         const searchResults = await TourService.find({name: {$regex: searchKey, $options:'i'}});
+        //render index.html and pass tourServicesdata
+        res.render('home',{tourServices:searchResults});
     }
     catch(err){
         console.log(err);
     }
-    //render index.html and pass tourServicesdata
-    res.render('home',{tourServices:searchResults});
 });
 
 

@@ -66,6 +66,7 @@ router.get('/redeem', async(req, res) => {
 // bikin method put buat ngelakuin redeem
 router.put('/redeem', async(req, res) => {
     //ngubah status
+});
 
 //lacak order
 router.post('/lacak', async (req,res) => {
