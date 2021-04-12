@@ -13,4 +13,14 @@ router.get('/', async (req,res) => {
     }
 });
 
+//tes
+router.get('/postOrder', (req,res) => {
+    try{
+        res.render("formulirOrder")
+    }
+    catch(err){
+        console.log(err)
+    }
+})
+
 module.exports = router;
