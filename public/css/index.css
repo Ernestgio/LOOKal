@@ -1,0 +1,63 @@
+html {
+    font-family: 'Source Sans Pro';
+}
+
+body {
+    font-family: 'Source Sans Pro';
+}
+
+h1 {
+    background-color: aquamarine;
+}
+
+.buttonblue {
+    background-color: #006994;
+    color: white;
+    margin: 5px;
+    border: none;
+    text-align: center;
+    padding: 12px 32px;
+    display: inline-block;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-Black.ttf') format('truetype');
+    font-weight: 'black';
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-Light.ttf') format('truetype');
+    font-weight: 'light';
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-ExtraLight.ttf') format('truetype');
+    font-weight: 'extralight';
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/font/SourceSansPro-SemiBold.ttf') format('truetype');
+    font-weight: 'semibold';
+    font-style: normal;
+}

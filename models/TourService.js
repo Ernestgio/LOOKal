@@ -5,10 +5,9 @@ const TourServiceSchema = new mongoose.Schema({
     imageURL: String,
     description: String,
     location: String,
-    adultTicketPrice: Number,
-    childrenTicketPrice: Number,
+    ticketPrice: Number,
     unit: String,
     type: String
 });
 
-module.exports = mongoose.model('TourService',TourServiceSchema);
+module.exports = mongoose.model('TourService', TourServiceSchema);

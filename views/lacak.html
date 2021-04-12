@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="LOOKal\public\css\index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Lacak Tiket</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lacak Tiket</h1>
+        <br>
+        <div style="width:800px;">
+            <div style="width:300px; float:left;">
+                <form action="/orders/lacak" method=GET>
+                    <div class="input-field">
+                        <input class="w3-input" type="text" id="orderId" name="orderId" placeholder="Masukkan kode tiket" style="padding:15px 32px; width: 100%; font-size: 17px;">
+                        <input type="submit" value="Submit" style="background-color: #006994; color: white; margin: 10px; border: none; text-align: center; padding: 12px 32px; display: inline-block;">
+                    </div>
+                </form>
+                <% if (order == null ) { %>
+                    <p style="color:#C00246; font-size:13px">
+                        Kode yang dimasukkan salah! Coba ulangi lagi.
+                    </p>
+                    <% } else if (order._id.$oid == -999){ %>
+                        <!-- <p>baru awal</p> -->
+                        <%} else { %>
+                            <p>
+                                <%= order._id.$iod %>
+                                    Ubah lagi nanti
+                            </p>
+                            <% } %>
+            </div>
+            <div style="width:300px; float:right;">
+                <h2>No Tiket</h2>
+                <h2>
+                    <!-- no tiket -->
+                </h2>
+                <br>
+
+                <div style="width:80px; float:left;">
+                    Nama<br><br> Layanan
+                    <br><br> Paket
+                    <br><br> Jumlah
+                    <br><br> Harga
+                    <br><br> Provider
+                    <br><br> Lokasi
+                    <br><br> Masa Berlaku<br><br>
+                </div>
+                <div style="width:220px; float:right;">
+                    <% if (order == null || order._id.$oid == -999 ) { %>
+                        <!-- nanti apus aja -->
+                        undefined<br><br> undefined
+                        <br><br> undefined
+                        <br><br> undefined
+                        <br><br> undefined
+                        <br><br> undefined
+                        <br><br> undefined
+                        <br><br> undefined
+                        <br><br>
+
+                        <%} else { %>
+                            <p>
+                                <%= order._id.$oid  %>
+                                    Ada
+                            </p>
+                            <% } %>
+
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <style>
+            html {
+                font-family: "Source Sans Pro";
+            }
+            
+            h1,
+            h2 {
+                font-style: "Semibold";
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </div>
+</body>
+
+</html>

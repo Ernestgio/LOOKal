@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOOKal</title>
 </head>
+
 <body>
     <% tourServices.forEach(function(tourService){ %>
         <div>
-            <h2><%= tourService.name %></h2>
+            <h2>
+                <%= tourService.name %>
+            </h2>
         </div>
 
         <img src=<%=tourService.imageURL%>>
@@ -18,7 +22,8 @@
         <h3><%= tourService.location %></h3>
         <h3><%= tourService.adultTicketPrice %></h3>
         <h3><%= tourService.childrenTicketPrice %></h3>
-
     <% }); %>
+    
 </body>
+
 </html>
