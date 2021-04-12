@@ -6,8 +6,9 @@ const TourService = require('../models/TourService');
 router.get('/', async(req, res) => {
     try {
         const tourServices = await TourService.find();
-        res.render('index', { tourServices: tourServices });
-    } catch (err) {
+        res.render('home',{tourServices:tourServices});
+    }
+    catch(err){
         console.log(err);
     }
 });
