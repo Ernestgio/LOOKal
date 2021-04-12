@@ -12,12 +12,14 @@ router.get('/:id', async (req,res) => {
     try{
         let requestedId = req.params.id;
         let tourService = await TourService.findById(requestedId);
+        res.render('detailTourService',{tourService:tourService});
+        
     }
     catch(err){
         console.log(err);
     }
     // render detailTourService.html dan passing data single tourService
-    res.render('detailTourService',{tourService:tourService[0]});
+    
 });
 
 
@@ -82,12 +84,13 @@ router.get('/:id/order', async(req,res) => {
     let requestedId = req.params.id;
     try{
         let tourService = await TourService.findById(requestedId);
+        res.render('formulirOrder',{tourService:tourService});
     }
     catch(err){
         console.log(err);
     }
     //render formulirOrder.html
-    res.render('formulirOrder',{tourService:tourService[0]});
+    
 });
 
 
