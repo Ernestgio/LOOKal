@@ -1,19 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title><%= tourService.name %></title>
+
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
 </head>
 <body>
-    <h5>Nama: <%= tourService.name %></h5>
-    <img src=<%=tourService.imageURL %> style="width:10%;height:10%;">
-    <h5>Deskripsi: <%= tourService.description %></h5>
-    <h5>Location: <%= tourService.location %></h5>
-    <h5>Harga: <%= tourService.ticketPrice %></h5>
-    <h5>Unit: <%= tourService.unit %></h5>
-    <h5>Tiket: <%= tourService.type %></h5>
-    <a href="/services/<%= tourService._id%>/order" class="btn btn-primary">Pesan Sekarang!</a>
+    
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/" style="font-family: suravaram;">LOOKal</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Beranda</a></li>
+        <li><a href="/lacak">Lacak Tiket</a></li>
+        <li><a href="/sekitarkita">Sekitar Kita</a></li>
+        <li><a href="/layanananda">(Owner) Layanan Anda</a></li>
+        <li><a href="/orders">(Owner) Cek seluruh Order</a></li>
+      </ul>
+    </div>
+</nav>
+
+<h2 style="text-align:center; margin-top: 70px">Detail Wisata</h2>
+
+<div class="card">
+    <img src= <%=tourService.imageURL %> style="width:50%;height:50%;">
+    <h1><%= tourService.name %></h1>
+  <p class="price">Rp.<%= tourService.ticketPrice %></p>
+  <h5>Location: <%= tourService.location %></h5>
+  <h5>Unit: <%= tourService.unit %>, Tiket: <%= tourService.type %> </h5>
+  <h5 style="text-align: justify; margin-left: 2px; margin-right: 2px"><%= tourService.description %></h5>
+  <button><a href="/services/<%= tourService._id%>/order" style="color: white">Pesan Sekarang</a></button>
+</div>
+
 </body>
 </html>
