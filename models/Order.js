@@ -10,6 +10,7 @@ const OrderSchema = mongoose.Schema({
     totalPrice: Number,
     paymentMethod: String,
     isRedeem: Boolean
+
 });
 
 module.exports = mongoose.model('Order', OrderSchema);

@@ -3,14 +3,38 @@ const router = express.Router();
 
 const TourService = require('../models/TourService');
 
-router.get('/', async (req,res) => {
-    try{
+router.get('/', async(req, res) => {
+    try {
         const tourServices = await TourService.find();
-        res.render('index',{tourServices:tourServices});
-    }
-    catch(err){
+        res.render('index', { tourServices: tourServices });
+    } catch (err) {
         console.log(err);
     }
+});
+
+
+router.get('/lacak', (req, res) => {
+    const orderbarubuka = { _id: { $oid: -999 }, name: "kosong" }
+    res.render('lacak', { order: orderbarubuka });
+});
+
+router.get('/redeem', (req, res) => {
+    const orderbarubuka = { _id: { $oid: -999 }, name: "kosong" }
+    res.render('redeem', { order: orderbarubuka });
+});
+
+router.get('/sekitarkita', (req, res) => {
+    res.render('sekitarkita');
+});
+
+router.get('/layanananda', async(req, res) => {
+    try {
+        const tourServices = await TourService.find();
+        res.render('layanananda', { tourServices: tourServices });
+    } catch (err) {
+        console.log(err);
+        console.log("ada crash kawanku");
+    };
 });
 
 //tes
@@ -24,5 +48,6 @@ router.get('/', async (req,res) => {
 //         console.log(err)
 //     }
 // })
+
 
 module.exports = router;

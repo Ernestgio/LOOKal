@@ -10,4 +10,4 @@ const TourServiceSchema = new mongoose.Schema({
     type: String
 });
 
-module.exports = mongoose.model('TourService',TourServiceSchema);
+module.exports = mongoose.model('TourService', TourServiceSchema);

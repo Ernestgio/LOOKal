@@ -1,6 +1,6 @@
 # LOOKal
 
-Lookal adalah sebuah platform berbentuk aplikasi web yang dapat digunakan untuk pengelolaan sistem informasi dan tiket untuk kawasan wisata lokal
+LOOkal adalah sebuah platform berbentuk aplikasi web yang dapat digunakan untuk pengelolaan sistem informasi dan tiket untuk kawasan wisata lokal
 
 
 ## Tech stack / Dependency
