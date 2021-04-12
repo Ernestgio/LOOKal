@@ -29,6 +29,25 @@
                         Tempat Layanan Wisata Sekitar Anda
 
                     </h3>
+                    <div class="container3">
+                        <div class="container" style="margin-top:50px; margin: left 50px">
+                          <h3>Rekomendasi Wisata</h3>
+                          <div class="row">
+                            <% tourServices.forEach(function(tourService){ %>
+                              <div class="col-md-4" style="margin-bottom: 50px;"> 
+                                  <div class="card" style="width:300px; border:black">
+                                    <img class="card-img-top" src="<%=tourService.imageURL %>" alt="Card image" style="width:100%">
+                                    <div class="card-body">
+                                      <h4 class="card-title"><%=tourService.name%></h4>
+                                      <h5>Harga: <%=tourService.ticketPrice %> / <%=tourService.unit %></h5>
+                                      <a href="/services/<%= tourService._id %>" class="btn btn-primary">Lihat Detail</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              <% }); %>
+                          </div>
+                        </div>
+                      </div>
                 </div>
 
             </div>
@@ -47,6 +66,37 @@
             </style>
         </div>
     </div>
+
+    
+
+<style>    
+        .container1 {
+          width: 100%;
+          position: absolute;
+          margin-top: 100px;
+          text-align: center;
+          color:black;
+        }
+      
+        .container3 {
+          width: 100%;
+          position: absolute;
+          margin-top: 1000px;
+          text-align: center;
+          color:black;
+        }
+      
+        .container1 .content {
+        position: absolute; /* Position the background text */
+        bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1; /* Grey text */
+        width: 100%; /* Full width */
+        padding: 20px; /* Some padding */
+        }
+</style>
+      
 
 </body>
 
