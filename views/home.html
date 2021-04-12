@@ -49,22 +49,21 @@ font-family: 'Open Sans', sans-serif">
 
 <div class="container1">
   <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wpp2?ver=2d13" style="width:100%;">
-<h3 class="centered" style="color:white">Dapatkan Potongan Harga untuk berwisata di daerah Sidorejo, Pangandaran, dan masih banyak lagi!</h3>
   <div class="container" style="margin-top:50px; margin: left 50px">
       <h3>Rekomendasi Wisata</h3>
       <div class="row">
         <% tourServices.forEach(function(tourService){ %>
-          <div class="col-md-4"> 
-            <div class="card" style="width:300px; border:black">
-              <img class="card-img-top" src="<%=tourService.imageURL %>" alt="Card image" style="width:100%">
-              <div class="card-body">
-                <h4 class="card-title"><%=tourService.name%></h4>
-                <h5>Harga: <%=tourService.ticketPrice %> / <%=tourService.unit %></h5>
-                <a href="/services/<%=tourService._id.$oid%>" class="btn btn-primary">Lihat Detail</a>
+          <div class="col-md-4" style="margin-bottom: 50px;"> 
+              <div class="card" style="width:300px; border:black">
+                <img class="card-img-top" src="<%=tourService.imageURL %>" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title"><%=tourService.name%></h4>
+                  <h5>Harga: <%=tourService.ticketPrice %> / <%=tourService.unit %></h5>
+                  <a href="/services/<%=tourService._id.$oid%>" class="btn btn-primary">Lihat Detail</a>
+                </div>
               </div>
             </div>
-          </div>
-        <% }); %>
+          <% }); %>
       </div>
     
   </div>
