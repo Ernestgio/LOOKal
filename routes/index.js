@@ -24,8 +24,16 @@ router.get('/redeem', (req, res) => {
     res.render('redeem', { order: orderbarubuka });
 });
 
-router.get('/sekitarkita', (req, res) => {
-    res.render('sekitarkita');
+router.get('/sekitarkita', async (req, res) => {
+    try{
+        const tourServices = await TourService.find();
+        res.render('sekitarkita',{tourServices:tourServices});
+    }
+
+    catch(err){
+        console.log(err);
+    }
+    
 });
 
 router.get('/layanananda', async(req, res) => {
