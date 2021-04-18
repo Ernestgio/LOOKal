@@ -74,7 +74,7 @@ font-family: 'Open Sans', sans-serif">
 
   <!-- <div class="search"> -->
     <form class="search" action="/services/search" method="POST">
-     <input type="text" class="searchTerm" placeholder="What are you looking?" name="searchTerm">
+     <input type="text" class="searchKey" placeholder="What are you looking for?" name="searchKey">
      <button type="submit" class="searchButton">
        <i class="fa fa-search"></i>
     </button>
@@ -96,13 +96,13 @@ font-family: 'Open Sans', sans-serif">
   }
   
   .searchTerm {
-     padding: 10px;
-    font-size: 17px;
+    width: 100%;
     border: 3px solid #00B4CC;
     border-right: none;
+    padding: 5px;
+    height: 36px;
     border-radius: 5px 0 0 5px;
-    float: left;
-    width: 80%;
+    outline: none;
     color: #9DBFAF;
   }
   
@@ -111,15 +111,15 @@ font-family: 'Open Sans', sans-serif">
   }
   
   .searchButton {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
+    font-size: 20px;
   }
   
   /*Resize the wrap to see the search bar change!*/
