@@ -38,10 +38,10 @@ font-family: 'Open Sans', sans-serif">
   <h5 style="text-align: center">Jelajahi wisata lokal hingga ke pedalaman</h5>
 </div>
 
-<div class="wrap">
+<div class="centered" >
   <!-- <div class="search"> -->
     <form class="search" action="/services/search" method="POST">
-     <input type="text" class="searchKey" placeholder="What are you looking for?" name="searchKey">
+     <input type="text" class="searchTerm" placeholder="What are you looking?" name="searchTerm">
      <button type="submit" class="searchButton">
        <i class="fa fa-search"></i>
     </button>
@@ -84,13 +84,13 @@ font-family: 'Open Sans', sans-serif">
   }
   
   .searchTerm {
-    width: 100%;
+     padding: 10px;
+    font-size: 17px;
     border: 3px solid #00B4CC;
     border-right: none;
-    padding: 5px;
-    height: 36px;
     border-radius: 5px 0 0 5px;
-    outline: none;
+    float: left;
+    width: 80%;
     color: #9DBFAF;
   }
   
@@ -99,20 +99,20 @@ font-family: 'Open Sans', sans-serif">
   }
   
   .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
     cursor: pointer;
-    font-size: 20px;
   }
   
   /*Resize the wrap to see the search bar change!*/
   .wrap {
-    width: 30%;
+    width: 100%;
     position: absolute;
     top: 200px;
     left: 50%;
@@ -137,7 +137,7 @@ font-family: 'Open Sans', sans-serif">
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -150%);
   }
   
   .container1 {
