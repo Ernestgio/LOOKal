@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>LOOKal</title>
 </head>
 
 <body>
-    <h1>Review Pesanan</h1>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/" style="font-family: suravaram;">LOOKal</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Beranda</a></li>
+        <li><a href="/lacak">Lacak Tiket</a></li>
+        <li><a href="/sekitarkita">Sekitar Kita</a></li>
+        <li><a href="/layanananda">(Owner) Layanan Anda</a></li>
+        <li><a href="/orders">(Owner) Cek seluruh Order</a></li>
+      </ul>
+    </div>
+</nav>
+
+    <h1 style="margin-top: 70px">Review Pesanan</h1>
     <form action="/services/<%=tourService._id%>/order" method="POST">
         <label for="nama">Nama</label><br>
         <input type="text" id="nama" name="nama"><br>

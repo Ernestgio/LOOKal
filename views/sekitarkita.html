@@ -29,6 +29,21 @@
                         Tempat Layanan Wisata Sekitar Anda
 
                     </h3>
+                        <div class="container">
+                          <div class="row">
+                            <% tourServices.forEach(function(tourService){ %>
+                              <div class="col-md-4" style="margin-bottom: 25px;"> 
+                                  <div class="card" style="width: 100px; border:black">
+                                    <img class="card-img-top" src="<%=tourService.imageURL %>" alt="Card image" style="width:100px">
+                                    <div class="card-body">
+                                      <p class="card-title" style="font-size: 10px"><%=tourService.name%></p>
+                                      <a href="/services/<%= tourService._id %>" class="btn btn-primary" style="font-size: 10px">Lihat Detail</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              <% }); %>
+                          </div>
+                        </div>
                 </div>
 
             </div>
@@ -47,6 +62,8 @@
             </style>
         </div>
     </div>
+
+      
 
 </body>
 
